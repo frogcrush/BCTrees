@@ -31,7 +31,6 @@ public class MainListActivity extends AppCompatActivity {
 
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                Toast.makeText(MainListActivity.this, "" + position + " " + myAdapter.trees.get(position).CommonName, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainListActivity.this, DetailActivity.class);
                 intent.putExtra("position", position);
                 startActivity(intent);
